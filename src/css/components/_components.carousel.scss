@@ -1,0 +1,89 @@
+/*------------------------------------*\
+  #CAROUSEL
+\*------------------------------------*/
+
+/**
+ * 1. Used to align controls at bottom of carousel content.
+ * 2. Centers carousel captions when one spans multiple lines.
+ */
+
+.carousel {
+
+  @media(min-width: $screen-md-min) {
+    @include display(flex); /* [1] */
+    @include align-items(flex-end); /* [1] */
+  }
+
+  &.carousel--rev {
+    @media(max-width: $screen-md-max) {
+      @include display(flex);
+      @include flex-direction(column-reverse);
+    }
+  }
+}
+
+  .carousel__slides {
+    .align--right & {
+      padding-right: 0;
+    }
+  }
+  .carousel__controls {
+
+    @media(min-width: $screen-md-min) {
+      max-width: 270px;
+    }
+
+    .carousel--rev & {
+      text-align: right;
+      margin-left: auto;
+    }
+  }
+
+  .carousel__captions {
+    font-family: "Roboto Slab";
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1;
+    padding: 20px;
+    border-top: 2px solid $color-accent;
+    border-bottom: 2px solid $color-accent;
+    text-align: left;
+    
+
+    @media(max-width: $screen-sm-max) {
+      background: $color-accent;
+      border: 0;
+
+    }
+
+    .carousel--rev & {
+      text-align: right;
+
+    }
+
+    .slick-track {
+      @include display(flex); /* [2] */
+      @include align-items(center); /* [2] */
+    }
+  }
+
+  .carousel__slide {
+    figure {
+      margin-bottom: 0;
+    }
+  }
+
+  .carousel--align--right {
+    > .carousel__slides {
+      > .slick-list {
+        margin-right: -5vw;
+      }
+    }
+  }
+  .carousel--align--left {
+    > .carousel__slides {
+      > .slick-list {
+        margin-left: -5vw;
+      }
+    }
+  }

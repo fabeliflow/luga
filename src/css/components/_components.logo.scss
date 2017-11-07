@@ -1,0 +1,43 @@
+/*------------------------------------*\
+  #LOGO
+\*------------------------------------*/
+
+.logo {
+  @include display(flex);
+  @include align-items(center);
+  @include justify-content(center);
+  position: relative;
+  height: 100%;
+
+  .page-head__top & {
+    img {
+      max-height: 44px;
+    }
+  }
+
+  img {
+    max-height: 100%;
+  }
+
+  @media(max-width: 900px) {
+    @include justify-content(flex-start);
+  }
+}
+
+  .logo--left {
+    @include justify-content(left);
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .logo__link {
+    display: block;
+
+    -webkit-transition: transform .3s ease-in-out;
+       -moz-transition: transform .3s ease-in-out;
+        -ms-transition: transform .3s ease-in-out;
+         -o-transition: transform .3s ease-in-out;
+            transition: transform .3s ease-in-out;
+
+
+  }

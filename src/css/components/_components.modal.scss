@@ -1,0 +1,83 @@
+.c-modal {
+  visibility: hidden;
+  display: none;
+  z-index: -1;
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  &.is-open {
+    display: block;
+    visibility: visible;
+    z-index: 1000;
+    -webkit-box-shadow: 0px -1px 71px -11px rgba(0,0,0,0.42);
+       -moz-box-shadow: 0px -1px 71px -11px rgba(0,0,0,0.42);
+            box-shadow: 0px -1px 71px -11px rgba(0,0,0,0.42);
+  }
+}
+
+.c-modal__wrap {
+  top: 10px;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+  position: fixed;
+  overflow: hidden;
+  color: #efefef;
+  background-color: #25201d;
+  text-align: center;
+
+  @media(min-width: $screen-sm-min) {
+    top: 20px;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+  }
+}
+.c-modal__body {
+  position: relative;
+  height: 100%;
+  overflow-y: hidden;
+
+    &:before {
+     background-image: url(../images/mobile-logo-bg.png);
+     background-repeat: no-repeat;
+     will-change: transform;
+     background-size: contain;
+     content: "";
+     position: fixed;
+     left: 20px;
+     right: 0;
+     top: 20px;
+     bottom: 0;
+     // opacity: 0.03;
+     @media(max-width: 992px){
+       background-size: cover;
+     }
+   }
+}
+
+.c-modal__close {
+  top: 30px;
+  right: 30px;
+  position: absolute;
+  z-index: 66;
+  background-color: transparent;
+  background-image: none;
+  cursor: pointer;
+  display: inline-block;
+  padding: 10px;
+  border: 0;
+  margin: 0;
+  color: inherit;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+  -webkit-transition-property: opacity,visibility;
+  transition-property: opacity,visibility;
+
+  &:focus {
+    outline: none;
+  }
+}

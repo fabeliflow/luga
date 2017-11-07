@@ -1,0 +1,20 @@
+.avatar {
+  border-radius: 100%;
+  display: inline-block;
+  height: 63px;
+  width: 63px;
+
+  .widget & {
+    margin-bottom: 40px;
+  }
+}
+
+  .avatar--small {
+    height: 44px;
+    width: 44px;
+  }
+
+  .avatar--large {
+    width: 131px;
+    height: 131px;
+  }

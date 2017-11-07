@@ -1,0 +1,23 @@
+///*----------------------------------*\
+//  #FUNCTIONS
+//\*----------------------------------*/
+
+// Custom functions.
+
+
+
+
+
+// Convert any px value into its rem equivalent.
+@function rem($number) {
+  @return $number / $global-font-size * 1rem;
+}
+
+// Halve any input and round the result.
+@function halve($number) {
+  @return round($number/2);
+}
+
+@function palette($palette, $tone: 'base') {
+  @return map-get(map-get($palettes, $palette), $tone);
+}

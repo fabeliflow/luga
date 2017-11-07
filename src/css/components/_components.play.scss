@@ -1,0 +1,91 @@
+.play {
+  display: inline-block;
+  -webkit-transition: all 0.5s ease;
+
+  svg {
+      width: 70px;
+      height: 70px;
+
+    @media(min-width: 768px) {
+      width: 100px;
+      height: 100px;
+    }
+
+    @media(min-width: 991px) {
+      width: 200px;
+      height: 200px;
+    }
+
+  }
+
+  @media(max-width: $screen-sm-max) {
+  //  #slide-1 & {
+  //    svg {
+  //      height: 150px;
+  //      width: 150px;
+  //    }
+  //  }
+  }
+
+  @include hocus() {
+    outline: none;
+  }
+
+  .play__triangle {
+    -webkit-transition: all 0.7s ease-in-out;
+    stroke-dasharray: 240;
+    stroke-dashoffset: 480;
+    stroke: #fff;
+    transform: translateY(0);
+  }
+
+  &:hover {
+    .play__triangle {
+      stroke-dashoffset: 0;
+      opacity: 1;
+      stroke: $color-accent;
+      animation: nudge 0.7s ease-in-out;
+
+      @keyframes nudge{
+        0% {
+          transform: translateX(0)
+        }
+        30% {
+          transform: translateX(-5px)
+        }
+        50% {
+          transform: translateX(5px)
+        }
+        70% {
+          transform: translateX(-2px)
+        }
+        100% {
+          transform: translateX(0)
+        }
+      }
+    }
+    .play__circle-outline {
+      stroke-dashoffset: 0;
+      opacity: 1;
+    }
+  }
+}
+
+
+.play__circle,
+.play__circle-outline {
+  stroke-dasharray: 650;
+  stroke-dashoffset: 650;
+  -webkit-transition: all 0.5s ease-in-out;
+}
+
+.play__circle-outline {
+  stroke: $color-accent;
+  opacity: 0.3;
+}
+
+.play__circle {
+  stroke: #fff;
+  opacity: 1;
+  stroke-dashoffset: 0;
+}

@@ -1,0 +1,194 @@
+/*------------------------------------*\
+  #ANIMATIONS
+\*------------------------------------*/
+.animate {
+  position: relative;
+  transition: all .3s ease-in-out;
+}
+
+.animate--grayscale {
+  img {
+    -webkit-filter: grayscale(100%);
+       -moz-filter: grayscale(100%);
+        -ms-filter: grayscale(100%);
+         -o-filter: grayscale(100%);
+            filter: grayscale(100%);
+  }
+
+  &:hover {
+    img {
+      -webkit-filter: grayscale(0);
+         -moz-filter: grayscale(0);
+          -ms-filter: grayscale(0);
+           -o-filter: grayscale(0);
+              filter: grayscale(0);
+    }
+  }
+}
+
+.animate--sepia {
+  img {
+    -webkit-filter: sepia(100%);
+       -moz-filter: sepia(100%);
+        -ms-filter: sepia(100%);
+         -o-filter: sepia(100%);
+            filter: sepia(100%);
+  }
+
+  &:hover {
+    img {
+      -webkit-filter: sepia(0);
+         -moz-filter: sepia(0);
+          -ms-filter: sepia(0);
+           -o-filter: sepia(0);
+              filter: sepia(0);
+    }
+  }
+}
+
+.animate--opacity {
+  img {
+    opacity: 1;
+  }
+
+  &:hover {
+    img {
+      opacity: .5;
+    }
+  }
+}
+
+.animate--overlay {
+  background-color: $color-accent;
+
+  img {
+    opacity: 1;
+  }
+
+  &:hover {
+    img {
+      opacity: .5;
+    }
+  }
+}
+
+.animate--shine {
+  &:before {
+    position: absolute;
+    top: 0;
+    left: -75%;
+    z-index: 2;
+    display: block;
+    content: '';
+    width: 50%;
+    height: 100%;
+    background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,.3) 100%);
+    background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,.3) 100%);
+    -webkit-transform: skewX(-25deg);
+    transform: skewX(-25deg);
+  }
+
+  &:hover {
+    &:before {
+      -webkit-animation: shine .75s;
+      animation: shine .75s;
+    }
+  }
+}
+@-webkit-keyframes shine {
+  100% {
+    left: 125%;
+  }
+}
+@keyframes shine {
+  100% {
+    left: 125%;
+  }
+}
+
+.animate--circle {
+  &:before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 2;
+    display: block;
+    content: '';
+    width: 0;
+    height: 0;
+    background: rgba(255,255,255,.2);
+    border-radius: 100%;
+    opacity: 0;
+    -webkit-transform: translate(-50%, -50%);
+       -moz-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+         -o-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+
+  &:hover {
+    &:before {
+      -webkit-animation: circle .75s;
+         -moz-animation: circle .75s;
+          -ms-animation: circle .75s;
+           -o-animation: circle .75s;
+              animation: circle .75s;
+    }
+  }
+}
+
+@-webkit-keyframes circle {
+  0% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 1;
+  }
+  100% {
+    width: 200%;
+    height: 200%;
+    opacity: 0;
+  }
+}
+@keyframes circle {
+  0% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 1;
+  }
+  100% {
+    width: 200%;
+    height: 200%;
+    opacity: 0;
+  }
+}
+
+.animate--flash {
+  &:hover {
+    img {
+      -webkit-animation: flash 1.5s;
+         -moz-animation: flash 1.5s;
+          -ms-animation: flash 1.5s;
+           -o-animation: flash 1.5s;
+              animation: flash 1.5s;
+    }
+  }
+}
+
+@-webkit-keyframes flash {
+  0% {
+    opacity: .4;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes flash {
+  0% {
+    opacity: .4;
+  }
+  100% {
+    opacity: 1;
+  }
+}

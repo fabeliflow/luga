@@ -1,0 +1,59 @@
+/*------------------------------------*\
+  #QUOTES
+\*------------------------------------*/
+
+/**
+ * Basic styling for quoted text.
+ */
+
+q {
+  font-style: italic;
+  quotes: "‘" "’";
+
+  &:before {
+    content: open-quote;
+  }
+
+  &:after {
+    content: close-quote;
+  }
+
+}
+
+blockquote {
+  float: right;
+  margin-left: 20px;
+  margin-top: 0px;
+  margin-bottom: 20px;
+  display: block;
+  width: 40%;
+  font-size: 22px;
+  line-height: 30px;
+  font-weight: 400;
+  color: #f1b241;
+  font-weight: 400;
+  font-family: 'Roboto Slab'; 
+
+  @media(max-width: 800px) {
+    display: none;
+  }
+
+  .article__content--split & {
+    float: none;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    width: 100%;
+    // font-size: 35px;
+    // line-height: 50px;
+  }
+}
+
+.article__quote {
+   font-family: Roboto Slab, sans-serif;
+   margin-top: 60px;
+   margin-bottom: 60px;
+   font-size: 46px;
+   line-height: 56px;
+   font-weight: 400;
+    color: $color-accent;
+ }
