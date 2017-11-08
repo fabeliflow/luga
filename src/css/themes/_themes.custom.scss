@@ -289,12 +289,14 @@ $sub-push:     ($diameter - $sub-diameter) / 2;
       $translation: ($diameter + $space) * 1;
       transform: translateY(-$translation) scale(1);
       opacity: 1;
+      color: #fff;
     }
     
     .fab-btn-tertiary {
       $translation: ($diameter + $space - $sub-push) * 2;
       transform: translateY(-$translation) scale(1);
       opacity: 1;
+      color: #fff;
     }
   }
 }
