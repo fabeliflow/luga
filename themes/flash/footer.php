@@ -163,13 +163,13 @@ global $progressive; ?>
 
     <div class="fab-inner">
       <div class="fab-btn-container">
-        <div class="fab-btn fab-btn-primary"><i class="fa  fa-plus" target="_blank"></i></div>
+        <div class="fab-btn fab-btn-primary"><i class="fa  fa-plus"></i></div>
         <?php if( $progressive['enable-ppc'] == 1  && !empty( $progressive['ppc-number'] ) ) : ?>
         <a href="tel:+1-<?php echo localize_us_number( $progressive['new-patient-number'] ); ?>" class="fab-btn fab-btn-secondary" target="_blank"><i class="fa  fa-phone"></i></a>
         <?php else : ?>
         <a href="tel:+1-<?php echo localize_us_number( $progressive['new-patient-number'] ); ?>" class="fab-btn fab-btn-secondary" target="_blank"><i class="fa  fa-phone"></i></a>
         <?php endif; ?>
-        <a href="https://www.google.com/maps/search/?api=1&query=<?php echo $progressive['address-line-one'] . ( !empty( $progressive['address-line-two'] ) ? ' ' . $progressive['address-line-two'] : '' ) . ', ' . $progressive['address-city'] . ', ' . $progressive['address-state'] . ' ' . $progressive['address-zip']; ?>" class="fab-btn fab-btn-tertiary"><i class="fa  fa-map-marker"></i></a>
+        <a href="https://www.google.com/maps/search/?api=1&query=<?php echo urlencode( $progressive['address-line-one'] . ( !empty( $progressive['address-line-two'] ) ? ' ' . $progressive['address-line-two'] : '' ) . ', ' . $progressive['address-city'] . ', ' . $progressive['address-state'] . ' ' . $progressive['address-zip'] ); ?>" class="fab-btn fab-btn-tertiary"><i class="fa  fa-map-marker"></i></a>
       </div>
     </div>
   </div>
