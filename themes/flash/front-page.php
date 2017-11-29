@@ -25,8 +25,8 @@ get_header(); ?>
           <div class="row">
             <div class="col-sm-10">
               <div class="slider__inner  slider__inner--center">
-                <span><h1 class="slider__eyebrow">Fort Wayne Oral Maxillofacial Surgery &amp; Implant Center, Fort Wayne, IN</h1></span>
-                <span><h2 class="slider__title">Exceptional Oral Surgery Care</h2></span>
+                <h1 class="slider__eyebrow">Fort Wayne Oral Maxillofacial Surgery &amp; Implant Center, Fort Wayne, IN</h1>
+                <h2 class="slider__title">Exceptional Oral Surgery Care</h2>
                 <div class="slider__btn-group">
                   <a href="/contact-us-fort-wayne-in" class="btn  btn--accent">SCHEDULE APPOINTMENT</a>
                   <a href="https://www.youtube.com/watch?v=uCvBpO28cKs" class="btn  btn--default  btn--ghost-white  js-slider-play">WATCH VIDEO</a>
