@@ -85,7 +85,7 @@ global $progressive
         <nav class='site-nav'>
           <div class='site-nav__logo-box'>
             <a class="site-nav__home-link" href="<?php echo esc_url( home_url() ); ?>">
-              <img alt="<?php echo esc_url( home_url() ); ?>" class='site-nav__logo' src="<?php echo $progressive['nav-logo']['url']; ?>">
+              <img alt="<?php echo get_bloginfo(name) ?>" class='site-nav__logo' src="<?php echo $progressive['nav-logo']['url']; ?>">
             </a>
           </div>
           <div class="site-nav__btn" aria-label="Menu" data-overlay="menu">

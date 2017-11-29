@@ -220,16 +220,33 @@ p {
 .main ul:not(.widget__list) {
   list-style: none;
   margin-left: 0;
+  display: table;
+}
+
+.main li:not(.widget__item) {
   display: table-row;
 }
 .main li:not(.widget__item):before {
-      content: 'arrow_forward';
-    font-family: 'Material Icons';
-    color: $color-accent;
-        padding-right: 10px;
-    font-size: 25px;
-    line-height: 25px;
-    vertical-align: middle;
+  content: 'arrow_forward';
+  font-family: 'Material Icons';
+  color: $color-accent;
+  padding-right: 10px;
+  font-size: 25px;
+  line-height: 25px;
+  vertical-align: top;
+  display: table-cell;
+  position: relative;
+  top: 2px;
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
 }
 
 .phone-callout {

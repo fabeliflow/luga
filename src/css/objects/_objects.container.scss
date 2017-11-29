@@ -30,9 +30,10 @@
     background-image: url(../images/logo-bg.png);
     background-repeat: no-repeat;
     will-change: transform;
+    background-size: contain;
     content: "";
     position: fixed;
-    left: -300px;
+    left: -60px;
     right: 0;
     top: 0;
     bottom: 0;

@@ -181,13 +181,13 @@ global $progressive; ?>
     </button>
   </div>
 </div>
-<div class="phone-callout">
+<!-- <div class="phone-callout">
   <?php if( $progressive['enable-ppc'] == 1  && !empty( $progressive['ppc-number'] ) ) : ?>
     <a class="icon  icon--phone  clicktoCall" href="tel:+1-<?php echo localize_us_number( $progressive['new-patient-number'] ); ?>" target="_blank" data-call-tracking-number="<?php echo $progressive['new-patient-number']; ?>" data-ppc-tracking-number="<?php echo $progressive['ppc-number']; ?>"></a>
   <?php else : ?>
     <a class="fa  fa-phone" href="tel:+1-<?php echo localize_us_number( $progressive['new-patient-number'] ); ?>" target="_blank"></a>
   <?php endif; ?>
-</div>
+</div> -->
 
 <?php
 /**

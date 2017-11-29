@@ -170,22 +170,23 @@ class doctor_widget extends WP_Widget {
 
 // Creating widget front-end
 // This is where the action happens
-  public function widget( $args, $instance ) {
-    $title = apply_filters( 'widget_title', $instance['title'] );
-    $image_url = apply_filters( 'image_url', $instance['image_url'] );
-    $doctor_text = apply_filters( 'doctor_text', $instance['doctor_text'] );
-    $doctor_link = apply_filters( 'doctor_link', $instance['doctor_link'] );
+public function widget( $args, $instance ) {
+  $title = apply_filters( 'widget_title', $instance['title'] );
+  $image_url = apply_filters( 'image_url', $instance['image_url'] );
+  $doctor_text = apply_filters( 'doctor_text', $instance['doctor_text'] );
+  $doctor_link = apply_filters( 'doctor_link', $instance['doctor_link'] );
+  $site_name = get_bloginfo(name);
 
-    echo $args['before_widget'];
-    echo '<img src="' . $image_url . '" class="avatar  avatar--large" >';
-    echo '<h3 class="widget__title  u-h2">' . $title . '</h3>';
-    echo '<p>' . $doctor_text . ' <a href="' . $doctor_link . '">Read more.</a></p>';
+  echo $args['before_widget'];
+  //echo '<img src="' . $image_url . '" class="avatar  avatar--large" >';
+  echo '<h3 class="widget__title  u-h3"><a class="doc-wrapper" href="' . $doctor_link . '"><img src="' . $image_url . '" alt="' . $site_name . '" class="avatar  widget__avatar" ><span class="widget__headline">' . $title . '</span></a></h3>';
+  echo '<p>' . $doctor_text . '</p>';
 
-    echo $args['after_widget'];
+  echo $args['after_widget'];
 
 // This is where you run the code and display the output
 
-  }
+}
 
 // Widget Backend
   public function form( $instance ) {
