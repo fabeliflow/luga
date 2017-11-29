@@ -130,6 +130,18 @@
   }
 }
 
+.btn--ghost-white {
+  background-color: transparent;
+  color: white;
+  border-color: white;
+
+  &:hover {
+    background-color: $color-btn-ghost-bg-hover--primary;
+    border-color: $color-btn-ghost-bg-hover--primary;
+    color: $color-btn-ghost-hover--primary;
+  }
+}
+
 .btn--ghost {
   background-color: transparent;
 

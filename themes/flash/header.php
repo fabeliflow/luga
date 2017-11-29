@@ -56,7 +56,7 @@ global $progressive
           <?php endif; ?>
         </div>
         <div class="page-head__doctor-text">
-          <?php echo ( !empty( $progressive['secondary-nav-left-text-initial'] ) ? $progressive['secondary-nav-left-text-initial'] . ' ' : '' ); ?> <span class="page-head__doctor-name"><a href="tel:+1-423-451-4450">New Patients: (423) 451-4450</a></span></div>
+          <?php echo ( !empty( $progressive['secondary-nav-left-text-initial'] ) ? $progressive['secondary-nav-left-text-initial'] . ' ' : '' ); ?> <span class="page-head__doctor-name">New Patients: <a href="tel:+1-<?php echo localize_us_number( $progressive['new-patient-number'] ); ?>"><?php echo $progressive['new-patient-number']; ?></a></span></div>
 
       </div>
       <div class="page-head__logo">

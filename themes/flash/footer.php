@@ -28,35 +28,44 @@ global $progressive; ?>
                 <ul class="map__content-list">
 
                   <!-- ADDRESS -->
-                  <?php if( $progressive['enable-address'] == 1 ) : ?>
-                  <li class="map__content-item">
-                    <i class="fa fa-map-marker"></i>
-                    <address class="map__content-info"><?php echo $progressive['address-line-one']; ?><?php echo ( !empty( $progressive['address-line-two'] ) ? ', ' . $progressive['address-line-two'] : '' ); ?><br> <?php echo $progressive['address-city']; ?>, <?php echo $progressive['address-state']; ?> <?php echo $progressive['address-zip']; ?></address>
-                  </li>
-                  <?php endif; ?>
-                  <!-- END ADDRESS -->
-
-                  <!-- NEW PATIENT NUMBER -->
-                  <?php if( $progressive['enable-new-patient-number'] == 1 && !empty( $progressive['new-patient-number'] ) ) : ?>
-                  <li class="map__content-item">
-                    <i class="fa fa-mobile-phone"></i>
-                    <?php if( $progressive['enable-ppc'] == 1  && !empty( $progressive['ppc-number'] ) ) : ?>
-                    <span class="map__content-info">New Patients:  <a href="tel:+1-<?php echo localize_us_number( $progressive['new-patient-number'] ); ?>" class="clickToCall" data-call-tracking-number="<?php echo $progressive['new-patient-number']; ?>" data-ppc-tracking-number="<?php echo $progressive['ppc-number']; ?>"><span class="webPpcNumber"><?php echo $progressive['ppc-number']; ?></a></span></span>
-                    <?php else : ?>
-                    <span class="map__content-info">New Patients:  <a href="tel:+1-<?php echo localize_us_number( $progressive['new-patient-number'] ); ?>"><?php echo $progressive['new-patient-number']; ?></a></span>
+                  <div class="first-loc-cont">
+                    <?php if( $progressive['enable-address'] == 1 ) : ?>
+                    <li class="map__content-item">
+                      <i class="fa fa-map-marker"></i>
+                      <address class="map__content-info"><?php echo $progressive['address-line-one']; ?><?php echo ( !empty( $progressive['address-line-two'] ) ? ', ' . $progressive['address-line-two'] : '' ); ?><br> <?php echo $progressive['address-city']; ?>, <?php echo $progressive['address-state']; ?> <?php echo $progressive['address-zip']; ?></address>
+                    </li>
+                    <!-- NEW PATIENT NUMBER -->
+                    <?php if( $progressive['enable-new-patient-number'] == 1 && !empty( $progressive['new-patient-number'] ) ) : ?>
+                    <li class="map__content-item">
+                      <i class="fa fa-mobile-phone"></i>
+                      <?php if( $progressive['enable-ppc'] == 1  && !empty( $progressive['ppc-number'] ) ) : ?>
+                      <span class="map__content-info">Phone:  <a href="tel:+1-<?php echo localize_us_number( $progressive['new-patient-number'] ); ?>" class="clickToCall" data-call-tracking-number="<?php echo $progressive['new-patient-number']; ?>" data-ppc-tracking-number="<?php echo $progressive['ppc-number']; ?>"><span class="webPpcNumber"><?php echo $progressive['ppc-number']; ?></a></span></span>
+                      <?php else : ?>
+                      <span class="map__content-info">Phone:  <a href="tel:+1-<?php echo localize_us_number( $progressive['new-patient-number'] ); ?>"><?php echo $progressive['new-patient-number']; ?></a></span>
+                      <?php endif; ?>
+                    </li>
                     <?php endif; ?>
-                  </li>
-                  <?php endif; ?>
-                  <!-- END NEW PATIENT NUMBER -->
-
-                  <!-- CURRENT PATIENT NUMBER -->
-                  <?php if( $progressive['enable-current-patient-number'] == 1 && !empty( $progressive['current-patient-number'] ) ) : ?>
-                  <li class="map__content-item">
-                    <i class="fa fa-mobile-phone"></i>
-                    <span class="map__content-info">Current Patients:  <a href="tel:+1-<?php echo localize_us_number( $progressive['current-patient-number'] ); ?>" target="_blank"><?php echo $progressive['current-patient-number']; ?></a></span>
-                  </li>
-                  <?php endif; ?>
-                  <!-- END CURRENT PATIENT NUMBER -->
+                    <!-- END NEW PATIENT NUMBER -->
+                  </div>
+                  <div class="second-loc-cont">
+                    <li class="map__content-item">
+                    <i class="fa fa-map-marker"></i>
+                    <address class="map__content-info">
+                      4011 W. Jefferson Blvd., Suite 300<br>
+                      Fort Wayne, IN 46804
+                    </address>
+                    </li>
+                    <?php endif; ?>
+                    <!-- END ADDRESS -->
+                    <!-- CURRENT PATIENT NUMBER -->
+                    <?php if( $progressive['enable-current-patient-number'] == 1 && !empty( $progressive['current-patient-number'] ) ) : ?>
+                    <li class="map__content-item">
+                      <i class="fa fa-mobile-phone"></i>
+                      <span class="map__content-info">Phone:  <a href="tel:+1-<?php echo localize_us_number( $progressive['new-patient-number'] ); ?>" target="_blank"><?php echo $progressive['new-patient-number']; ?></a></span>
+                    </li>
+                    <?php endif; ?>
+                    <!-- END CURRENT PATIENT NUMBER -->
+                  </div>
                 </ul>
               </div>
 
@@ -135,12 +144,12 @@ global $progressive; ?>
   <!-- END FOOTER -->
 <?php endif; ?>
 
-<div class="c-modal" style="position:absolute" aria-hidden="true" tabindex="-1" role="dialog" id="modal">
+<div class="c-modal" style="position:absolute" aria-hidden="true" tabindex="-1" role="dialog" aria-labelledby="Site modal" id="modal">
     <div class="c-modal__wrap">
       <div class="c-modal__body">
         <div class="c-menu c-overlay" id="site-menu">
           <h3 class="c-overlay__title">Menu</h3>
-          <ol class="o-breadcrumbs" aria-label="Navigation Path">
+          <ol class="o-breadcrumbs" role="navigation" aria-label="Navigation Path">
             <li class="o-breadcrumbs__item">
               <span>Menu</span>
             </li>
@@ -157,23 +166,13 @@ global $progressive; ?>
       </button>
     </div>
   </div>
-
-
-  <div class='fab-main'>
-
-    <div class="fab-inner">
-      <div class="fab-btn-container">
-        <div class="fab-btn fab-btn-primary"><i class="fa  fa-plus"></i></div>
-        <?php if( $progressive['enable-ppc'] == 1  && !empty( $progressive['ppc-number'] ) ) : ?>
-        <a href="tel:+1-<?php echo localize_us_number( $progressive['new-patient-number'] ); ?>" class="fab-btn fab-btn-secondary" target="_blank"><i class="fa  fa-phone"></i></a>
-        <?php else : ?>
-        <a href="tel:+1-<?php echo localize_us_number( $progressive['new-patient-number'] ); ?>" class="fab-btn fab-btn-secondary" target="_blank"><i class="fa  fa-phone"></i></a>
-        <?php endif; ?>
-        <a href="https://www.google.com/maps/search/?api=1&query=<?php echo urlencode( $progressive['address-line-one'] . ( !empty( $progressive['address-line-two'] ) ? ' ' . $progressive['address-line-two'] : '' ) . ', ' . $progressive['address-city'] . ', ' . $progressive['address-state'] . ' ' . $progressive['address-zip'] ); ?>" class="fab-btn fab-btn-tertiary"><i class="fa  fa-map-marker"></i></a>
-      </div>
-    </div>
+  <div class="phone-callout">
+    <?php if( $progressive['enable-ppc'] == 1  && !empty( $progressive['ppc-number'] ) ) : ?>
+    <a class="icon  icon--phone  clicktoCall" href="tel:+1-<?php echo localize_us_number( $progressive['new-patient-number'] ); ?>" target="_blank" data-call-tracking-number="<?php echo $progressive['new-patient-number']; ?>" data-ppc-tracking-number="<?php echo $progressive['ppc-number']; ?>"></a>
+    <?php else : ?>
+    <a class="fa  fa-phone" href="tel:+1-<?php echo localize_us_number( $progressive['new-patient-number'] ); ?>" target="_blank"></a>
+    <?php endif; ?>
   </div>
-
 
   <?php
   /**

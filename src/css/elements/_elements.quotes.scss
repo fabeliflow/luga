@@ -30,9 +30,9 @@ blockquote {
   font-size: 22px;
   line-height: 30px;
   font-weight: 400;
-  color: #f1b241;
+  color: $color-accent;
   font-weight: 400;
-  font-family: 'Roboto Slab'; 
+  font-family: 'Roboto Slab';
 
   @media(max-width: 800px) {
     display: none;

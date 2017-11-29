@@ -44,6 +44,10 @@
   color: $color-white;
   border-bottom: 1px solid $color-light-primary;
 
+  .img {
+    margin-bottom: 40px;
+  }
+
   @media(max-width: $screen-xs-max) {
     padding: 25px 20px;
   }

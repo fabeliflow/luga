@@ -220,6 +220,7 @@ p {
 .main ul:not(.widget__list) {
   list-style: none;
   margin-left: 0;
+  display: table-row;
 }
 .main li:not(.widget__item):before {
       content: 'arrow_forward';
@@ -283,7 +284,7 @@ $sub-push:     ($diameter - $sub-diameter) / 2;
   position: absolute;
   right: 50px;
   bottom: 51px;
-  
+
   &.active {
     .fab-btn-secondary {
       $translation: ($diameter + $space) * 1;
@@ -291,7 +292,7 @@ $sub-push:     ($diameter - $sub-diameter) / 2;
       opacity: 1;
       color: #fff;
     }
-    
+
     .fab-btn-tertiary {
       $translation: ($diameter + $space - $sub-push) * 2;
       transform: translateY(-$translation) scale(1);
@@ -302,6 +303,7 @@ $sub-push:     ($diameter - $sub-diameter) / 2;
 }
 
 .fab-btn {
+  cursor: pointer;
   @include shadow;
   -webkit-transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1);
   -moz-transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1);
@@ -325,6 +327,7 @@ $sub-push:     ($diameter - $sub-diameter) / 2;
   position: fixed;
   right: 25px;
   bottom: 25px;
+  z-index: 999999999;
 }
 
 .fab-inner {
@@ -384,7 +387,7 @@ $sub-push:     ($diameter - $sub-diameter) / 2;
   }
 
 
-  
+
 .video,
 .image {
   margin-bottom: 0;
@@ -409,7 +412,7 @@ $sub-push:     ($diameter - $sub-diameter) / 2;
 
 .video__right {
   text-align: right;
-  
+
   .grid__item & {
     @include align-self(flex-start);
   }

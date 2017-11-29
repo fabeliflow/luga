@@ -28,6 +28,10 @@
     @include display(flex);
     @include align-items(center);
     @include justify-content(space-between);
+    -webkit-box-shadow: 0 1px 12px 0 rgba(51,51,51,0.23);
+    -moz-box-shadow: 0 1px 12px 0 rgba(51,51,51,0.23);
+    -ms-box-shadow: 0 1px 12px 0 rgba(51,51,51,0.23);
+    box-shadow: 0 1px 12px 0 rgba(51,51,51,0.23);
     position: fixed;
     top: 0;
     left: 0;

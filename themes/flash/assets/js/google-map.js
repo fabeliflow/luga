@@ -39,7 +39,7 @@
       }
 
       var mapOptions = {
-        zoom: 12,
+        zoom: 11,
         scrollwheel: false,
         draggable: false,
         disableDefaultUI: true,
@@ -62,6 +62,7 @@
         new google.maps.Point(12, 35));
       // Let's also add a marker while we're at it
       var marker = new google.maps.Marker({position: new google.maps.LatLng(latitude, longitude), map: map, title: siteName, icon: pinImage, shadow: pinShadow});
+      var marker2 = new google.maps.Marker({position: new google.maps.LatLng(41.071058, -85.1948064), map: map, title: siteName, icon: pinImage, shadow: pinShadow});
 
       map.panBy(250, 0);
       var pos = marker.getPosition();
@@ -75,8 +76,10 @@
 
         if ($(window).width() < 992) {
           marker.setMap(null);
+          marker2.setMap(null);
         } else {
           marker.setMap(map);
+          marker2.setMap(map);
         }
       }
 
@@ -87,6 +90,7 @@
 
       if ($(window).width() < 992) {
         marker.setMap(null);
+        marker2.setMap(null);
       }
     });
   }
