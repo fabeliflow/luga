@@ -174,6 +174,45 @@ global $progressive; ?>
     <?php endif; ?>
   </div>
 
+  <div class="c-modal" style="position:absolute" aria-hidden="true" tabindex="-1" role="dialog" id="modal">
+      <div class="c-modal__wrap">
+        <div class="c-modal__body">
+          <div class="c-menu c-overlay" id="site-menu">
+            <h3 class="c-overlay__title">Menu</h3>
+            <ol class="o-breadcrumbs" aria-label="Navigation Path">
+              <li class="o-breadcrumbs__item">
+                <span>Menu</span>
+              </li>
+            </ol>
+            <nav class="c-menu__main c-move__me">
+              <ul class="c-menu__nav"  data-depth="0">
+                <?php wp_nav_menu( array( 'menu_id' => 'primary-menu', 'theme_location' => 'primary-menu', 'items_wrap' => '%3$s', 'container' => false, 'menu_class' => false, 'walker' => new Wpse8170_Menu_Walker() ) ); ?>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <button class="c-modal__close o-control" data-label="Chiudi">
+          <span class="fa fa-times o-control__ico"></span>
+        </button>
+      </div>
+    </div>
+
+
+    <div class='fab-main'>
+
+      <div class="fab-inner">
+        <div class="fab-btn-container">
+          <div class="fab-btn fab-btn-primary"><i class="fa  fa-plus"></i></div>
+          <?php if( $progressive['enable-ppc'] == 1  && !empty( $progressive['ppc-number'] ) ) : ?>
+          <a href="tel:+1-<?php echo localize_us_number( $progressive['new-patient-number'] ); ?>" class="fab-btn fab-btn-secondary" target="_blank"><i class="fa  fa-phone"></i></a>
+          <?php else : ?>
+          <a href="tel:+1-<?php echo localize_us_number( $progressive['new-patient-number'] ); ?>" class="fab-btn fab-btn-secondary" target="_blank"><i class="fa  fa-phone"></i></a>
+          <?php endif; ?>
+          <a target="_blank" href="https://www.google.com/maps/search/?api=1&query=<?php echo urlencode( $progressive['address-line-one'] . ( !empty( $progressive['address-line-two'] ) ? ' ' . $progressive['address-line-two'] : '' ) . ', ' . $progressive['address-city'] . ', ' . $progressive['address-state'] . ' ' . $progressive['address-zip'] ); ?>" class="fab-btn fab-btn-tertiary"><i class="fa  fa-map-marker"></i></a>
+        </div>
+      </div>
+    </div>
+
   <?php
   /**
    * The template for displaying the footer

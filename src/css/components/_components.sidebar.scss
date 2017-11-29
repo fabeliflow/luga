@@ -1,11 +1,14 @@
 .sidebar {
   background-color: darken($color-tertiary, 2%);
+  // color: $color-sidebar;
   margin-top: calc( -8vh - 125px );
   height: calc( 100% + 8vh + 125px + 4rem );
   position: absolute;
   right: 0;
 
-  @media(max-width: $screen-sm-max) {
+
+
+  @media(max-width: $screen-md-max) {
     position: relative;
     height: inherit;
     margin-top: 0;
@@ -17,8 +20,6 @@
   }
 }
 
-.sidebar--contact,
-.sidebar--blog {
-  height: 100%;
+.sidebar--contact {
   margin-top: inherit;
 }
