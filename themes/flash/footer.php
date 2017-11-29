@@ -25,10 +25,10 @@ global $progressive; ?>
               <div class="col-md-5  col-md-offset-7">
                 <div class="map__content-header">
                   <h4 class="map__content-title">Contact Us</h4>
-                  <ul class="map__content-list">
+                  <!-- <ul class="map__content-list"> -->
 
                     <!-- ADDRESS -->
-                    <div class="first-loc-cont">
+                    <ul class="first-loc-cont">
                       <?php if( $progressive['enable-address'] == 1 ) : ?>
                         <li class="map__content-item">
                           <i class="fa fa-map-marker"></i>
@@ -46,8 +46,8 @@ global $progressive; ?>
                           </li>
                         <?php endif; ?>
                         <!-- END NEW PATIENT NUMBER -->
-                      </div>
-                      <div class="second-loc-cont">
+                      </ul>
+                      <ul class="second-loc-cont">
                         <li class="map__content-item">
                           <i class="fa fa-map-marker"></i>
                           <address class="map__content-info">
@@ -65,8 +65,8 @@ global $progressive; ?>
                         </li>
                       <?php endif; ?>
                       <!-- END CURRENT PATIENT NUMBER -->
-                    </div>
-                  </ul>
+                    </ul>
+                  <!-- </ul> -->
                 </div>
 
                 <!-- GOOGLE REVIEWS -->
