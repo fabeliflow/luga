@@ -46,7 +46,7 @@ get_header(); ?>
             <div class="row">
               <div class="col-md-offset-5  col-md-6  col-lg-offset-5  col-lg-5  col-sm-12">
                 <div class="slider__inner  slider__inner--doctor">
-                  <span><h2 class="slider__title">Dr. Lugakingira</h2></span>
+                  <h2 class="slider__title">Dr. Lugakingira</h2>
                   <p class="slider__desc"> Dr. Lugakingira a.k.a “The Implant Doctor”, a.k.a “Dr. Luga” is originally from Tanzania, East Africa. His undergraduate majors were Physics, Chemistry, Biology, and Advanced Mathematics. He earned his DDS degree from the University of Dar-es-salaam in 1999, and his DMD degree from the University of Pennsylvania in 2004, both with honors. His academic career was distinguished by numerous awards and honors. He earned his M.S degree and Certificate in Oral and Maxillofacial Surgery from the University of Illinois at Chicago in 2011.</p>
                   <a href="/doctor/dr-lugakingira-fort-wayne-in" class="btn  btn--accent  btn--bio">Read More</a>
                 </div>
@@ -62,7 +62,7 @@ get_header(); ?>
             <div class="row">
               <div class="col-md-offset-5  col-md-6  col-lg-offset-5  col-lg-5  col-sm-12">
                 <div class="slider__inner  slider__inner--doctor">
-                  <span><h2 class="slider__title">Dr. Awah</h2></span>
+                  <h2 class="slider__title">Dr. Awah</h2>
                   <p class="slider__desc"> Dr. Franklin Awah joins our practice from Hanover Park, IL. He did his undergraduate studies at the University of Illinois at Chicago (UIC) where he majored in Information Technology. His passion for healthcare and service made him return to dental school at UIC. During dental school, he developed a love for oral surgery. His hard work and dedication was rewarded with the AAOMS Student of the Year award. He was accepted into the University of Alabama at Birmingham (UAB), one of the top oral surgery programs in the country.</p>
                   <a href="/doctor/dr-awah-fort-wayne-in" class="btn  btn--accent  btn--bio">Read More</a>
                 </div>

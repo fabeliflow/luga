@@ -159,7 +159,7 @@ global $progressive; ?>
   </div>
 </div>
 
-<div class="c-modal" style="position:absolute" aria-hidden="true" tabindex="-1" role="dialog" modal" id="modal">
+<div class="c-modal" style="position:absolute" aria-hidden="true" tabindex="-1" role="dialog" id="modal">
   <div class="c-modal__wrap">
     <div class="c-modal__body">
       <div class="c-menu c-overlay" id="site-menu">
