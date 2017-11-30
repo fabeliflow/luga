@@ -154,6 +154,10 @@ get_header(); ?>
                   <span class="map__content-info">Phone:  <a href="tel:+1-<?php echo localize_us_number( $progressive['new-patient-number'] ); ?>"><?php echo $progressive['new-patient-number']; ?></a></span>
                   <?php endif; ?>
                 </li>
+                <li class="map__content-item">
+                  <i class="fa fa-mobile-phone"></i>
+                  <span class="map__content-info">Current Patient:  <a href="tel:+1-<?php echo localize_us_number( $progressive['current-patient-number'] ); ?>" target="_blank"><?php echo $progressive['current-patient-number']; ?></a></span>
+                </li>
                 <?php endif; ?>
                 <!-- END NEW PATIENT NUMBER -->
               </ul>
@@ -175,6 +179,10 @@ get_header(); ?>
                 <li class="map__content-item">
                   <i class="fa fa-mobile-phone"></i>
                   <span class="map__content-info">Phone:  <a href="tel:+1-<?php echo localize_us_number( $progressive['new-patient-number'] ); ?>" target="_blank"><?php echo $progressive['new-patient-number']; ?></a></span>
+                </li>
+                <li class="map__content-item">
+                  <i class="fa fa-mobile-phone"></i>
+                  <span class="map__content-info">Current Patient:  <a href="tel:+1-<?php echo localize_us_number( $progressive['current-patient-number'] ); ?>" target="_blank"><?php echo $progressive['current-patient-number']; ?></a></span>
                 </li>
                 <?php endif; ?>
                 <!-- END CURRENT PATIENT NUMBER -->
