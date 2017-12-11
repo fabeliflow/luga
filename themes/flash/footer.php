@@ -39,9 +39,9 @@ global $progressive; ?>
                           <li class="map__content-item">
                             <i class="fa fa-mobile-phone"></i>
                             <?php if( $progressive['enable-ppc'] == 1  && !empty( $progressive['ppc-number'] ) ) : ?>
-                              <span class="map__content-info">Phone:  <a href="tel:+1-<?php echo localize_us_number( $progressive['new-patient-number'] ); ?>" class="clickToCall" data-call-tracking-number="<?php echo $progressive['new-patient-number']; ?>" data-ppc-tracking-number="<?php echo $progressive['ppc-number']; ?>"><span class="webPpcNumber"><?php echo $progressive['ppc-number']; ?></a></span></span>
+                              <span class="map__content-info">New Patient:  <a href="tel:+1-<?php echo localize_us_number( $progressive['new-patient-number'] ); ?>" class="clickToCall" data-call-tracking-number="<?php echo $progressive['new-patient-number']; ?>" data-ppc-tracking-number="<?php echo $progressive['ppc-number']; ?>"><span class="webPpcNumber"><?php echo $progressive['ppc-number']; ?></a></span></span>
                             <?php else : ?>
-                              <span class="map__content-info">Phone:  <a href="tel:+1-<?php echo localize_us_number( $progressive['new-patient-number'] ); ?>"><?php echo $progressive['new-patient-number']; ?></a></span>
+                              <span class="map__content-info">Current Patient:  <a href="tel:+1-<?php echo localize_us_number( $progressive['new-patient-number'] ); ?>"><?php echo $progressive['new-patient-number']; ?></a></span>
                             <?php endif; ?>
                           </li>
                           <li class="map__content-item">

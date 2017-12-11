@@ -29,7 +29,7 @@ get_header(); ?>
                 <h2 class="slider__title">Exceptional Oral Surgery Care</h2>
                 <div class="slider__btn-group">
                   <a href="/contact-us-fort-wayne-in" class="btn  btn--accent">SCHEDULE APPOINTMENT</a>
-                  <a href="https://www.youtube.com/watch?v=uCvBpO28cKs" class="btn  btn--default  btn--ghost-white  js-slider-play">WATCH VIDEO</a>
+                  <a href="https://www.youtube.com/watch?v=4A7YfM73brk" class="btn  btn--default  btn--ghost-white  js-slider-play">WATCH VIDEO</a>
                 </div>
               </div>
             </div>
