@@ -4,7 +4,7 @@
 
 .masthead {
   position: relative;
-  color: white;
+  color:   #5cb1fc;
   overflow: hidden;
 }
 
@@ -139,6 +139,7 @@
   .masthead__eyebrow {
     position: relative;
     margin-bottom: 9px;
+    color: #fff;
 
     .masthead--image & {
       font-style: 14px;
