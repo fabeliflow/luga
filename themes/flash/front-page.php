@@ -213,7 +213,10 @@ get_header(); ?>
       <div class="row">
         <div class="footer__content">
           <div class="footer__copyright  col-sm-6">
-            <p>Powered by Progressive Dental Marketing<span>&copy; <script>document.write( new Date().getFullYear() );</script> <?php echo get_bloginfo( 'name' ); ?></span></p>
+            <p>
+            <a style="color:DodgerBlue;" href="https://www.progressivedentalmarketing.com/dental-website-design/">Dental Website</a> by <a style="color:DodgerBlue;" href="https://www.progressivedentalmarketing.com/">Progressive Dental Marketing</a>
+            <span>&copy; <script>document.write( new Date().getFullYear() );</script> <?php echo get_bloginfo( 'name' ); ?></span>
+            </p>
           </div>
           <div class="footer__social  col-sm-6">
             <ul class="footer__list">
