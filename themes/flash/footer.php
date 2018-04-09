@@ -156,7 +156,7 @@ global $progressive; ?>
 
   <div class="fab-inner">
     <div class="fab-btn-container">
-      <div class="fab-btn fab-btn-primary"><i class="fa  fa-plus"></i></div>
+      <div class="fab-btn fab-btn-primary"><i class="fa  fa-phone"></i></div>
       <?php if( $progressive['enable-ppc'] == 1  && !empty( $progressive['ppc-number'] ) ) : ?>
       <a href="tel:+1-<?php echo localize_us_number( $progressive['new-patient-number'] ); ?>" class="fab-btn fab-btn-secondary" target="_blank"><i class="fa  fa-phone"></i></a>
       <?php else : ?>
